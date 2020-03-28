@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <packaging>pom</packaging>
+
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -14,8 +14,7 @@
     <groupId>org.cm</groupId>
     <artifactId>cm-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <!--    <packaging>pom</packaging>-->
-
+    <packaging>pom</packaging>
     <!--  配置自定义参数-->
     <properties>
         <!--  maven-resources-plugin自动使用 配置编码  -->
@@ -28,14 +27,13 @@
         <jdk.version>1.8</jdk.version>
     </properties>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter</artifactId>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+    </dependencies>
+
 
 
     <build>
