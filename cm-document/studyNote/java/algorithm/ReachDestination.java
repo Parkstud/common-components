@@ -13,7 +13,7 @@ import java.util.List;
  * @author miao.chen01@hand-china.com 2020-03-28
  */
 public class ReachDestination {
-//    3,4,2,1,3,1
+    //    3,4,2,1,3,1
     static List<Integer> min = Arrays.asList(3,4,2,1,3,1);
 
     public static List<Integer> move(int[] array, List<Integer> path, int walk) {
