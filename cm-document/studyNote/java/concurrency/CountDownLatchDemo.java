@@ -35,6 +35,7 @@ class MyThread implements Runnable {
         for (int i = 0; i < 5; i++) {
             log.info("i:{}", i);
             latch.countDown();
+
         }
     }
 }
