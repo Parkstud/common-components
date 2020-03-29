@@ -16,6 +16,7 @@ public class SemaphoreDemo {
         new IncThread("A", semaphore);
         new DecThread("B", semaphore);
     }
+
 }
 
 /**
@@ -24,6 +25,7 @@ public class SemaphoreDemo {
 class Shared {
     static int count = 0;
 }
+
 
 /**
  * 线程一 增加值
