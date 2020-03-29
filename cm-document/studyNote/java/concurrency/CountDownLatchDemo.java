@@ -5,7 +5,7 @@ import java.util.concurrent.CountDownLatch;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * 锁存器
+ * 闭锁
  *
  * @author parkstud@qq.com 2020-03-28
  */
@@ -19,23 +19,22 @@ public class CountDownLatchDemo {
         log.info("Done");
 
     }
-}
+    static class MyThread implements Runnable {
+        CountDownLatch latch;
 
-@Slf4j
-class MyThread implements Runnable {
-    CountDownLatch latch;
+        public MyThread(CountDownLatch latch) {
+            this.latch = latch;
+            new Thread(this).start();
+        }
 
-    public MyThread(CountDownLatch latch) {
-        this.latch = latch;
-        new Thread(this).start();
-    }
-
-    @Override
-    public void run() {
-        for (int i = 0; i < 5; i++) {
-            log.info("i:{}", i);
-            latch.countDown();
-
+        @Override
+        public void run() {
+            for (int i = 0; i < 5; i++) {
+                log.info("i:{}", i);
+                latch.countDown();
+            }
         }
     }
+
 }
+
