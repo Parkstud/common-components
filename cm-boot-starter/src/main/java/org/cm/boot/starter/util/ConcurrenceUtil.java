@@ -13,11 +13,11 @@ import java.util.concurrent.TimeUnit;
  *
  * @author parkstud@qq.com 2020-03-29
  */
-public abstract class ConcurrencyUtil {
+public abstract class ConcurrenceUtil {
     /**
      * 私有化构造函数
      */
-    private ConcurrencyUtil() {
+    private ConcurrenceUtil() {
     }
 
     /**
@@ -55,7 +55,7 @@ public abstract class ConcurrencyUtil {
                 Runtime.getRuntime().availableProcessors() * 2,
                 60,
                 TimeUnit.SECONDS,
-                new LinkedBlockingQueue<>(1024), new ThreadFactoryBuilder().setNameFormat("default-%d").build());
+                new LinkedBlockingQueue<>(10240), new ThreadFactoryBuilder().setNameFormat("default-%d").build());
     }
 
 }
