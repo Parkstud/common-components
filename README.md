@@ -1,2 +1,2 @@
 # common-components
-java common components and some practices
+认真编码,友好沟通

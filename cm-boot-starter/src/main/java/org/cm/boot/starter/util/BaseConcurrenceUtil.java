@@ -3,6 +3,7 @@ package org.cm.boot.starter.util;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -18,6 +19,15 @@ public abstract class BaseConcurrenceUtil {
      * 私有化构造函数
      */
     private BaseConcurrenceUtil() {
+    }
+
+    /**
+     * 获取公共线程池
+     *
+     * @return 公共线程池
+     */
+    public static ForkJoinPool getCommonPool() {
+        return ForkJoinPool.commonPool();
     }
 
     /**
