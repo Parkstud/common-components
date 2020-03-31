@@ -1,6 +1,6 @@
 package concurrency;
 
-import org.cm.boot.starter.util.ConcurrenceUtil;
+import org.cm.boot.starter.util.BaseConcurrenceUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +44,7 @@ public class ProviderAndConsumerDemo<T> {
     private List<T> queue = new ArrayList<>();
 
     public static void main(String[] args) {
-        ThreadPoolExecutor poolExecutor = ConcurrenceUtil.getDefaultThreadPoolExecutor();
+        ThreadPoolExecutor poolExecutor = BaseConcurrenceUtil.getDefaultThreadPoolExecutor();
         ProviderAndConsumerDemo<DateInfo> demo = new ProviderAndConsumerDemo<>();
         poolExecutor.execute(new Provider<>("Provider-A",demo.queue));
         poolExecutor.execute(new Provider<>("Provider-B",demo.queue));

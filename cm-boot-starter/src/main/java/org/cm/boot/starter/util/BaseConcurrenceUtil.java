@@ -13,11 +13,11 @@ import java.util.concurrent.TimeUnit;
  *
  * @author parkstud@qq.com 2020-03-29
  */
-public abstract class ConcurrenceUtil {
+public abstract class BaseConcurrenceUtil {
     /**
      * 私有化构造函数
      */
-    private ConcurrenceUtil() {
+    private BaseConcurrenceUtil() {
     }
 
     /**

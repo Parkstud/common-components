@@ -1,6 +1,6 @@
 package concurrency;
 
-import org.cm.boot.starter.util.ConcurrenceUtil;
+import org.cm.boot.starter.util.BaseConcurrenceUtil;
 
 import java.util.concurrent.ThreadPoolExecutor;
 
@@ -24,7 +24,7 @@ public class SynchronizedDemo implements Runnable {
     }
 
     public static void main(String[] args) {
-        ThreadPoolExecutor pool = ConcurrenceUtil.getDefaultThreadPoolExecutor();
+        ThreadPoolExecutor pool = BaseConcurrenceUtil.getDefaultThreadPoolExecutor();
         // 多个实例对象锁,锁不了
         SynchronizedDemo A = new SynchronizedDemo();
         SynchronizedDemo B = new SynchronizedDemo();
