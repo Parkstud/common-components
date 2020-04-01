@@ -172,7 +172,11 @@ redis持久包括两种
 
 ## redis使用
 
+**docker安装redis命令**:# docker run -d --name redis -p 16379:6379 --restart=always -v /root/docker/redis/dir:/data redis --requirepass 'root'  --appendonly yes
+
 ### 常用redis命令
+
+
 
 - 全局命令
 
@@ -358,6 +362,8 @@ public class RedisServiceDemo1 {
         jsonRedisTemplate.opsForList().leftPush("lpxx","qweqwe");
         jsonRedisTemplate.opsForSet().add("set_xxx","asdasd","asdasd");
         jsonRedisTemplate.opsForZSet().add("zset_xxx","adasd",0.1);
+        // 获取key 下面的map数据
+    	jsonRedisTemplate.opsForHash().entries("key");
     }
     public void test2(){
         log.info(jsonRedisTemplate.getClass().toString());
