@@ -14,19 +14,15 @@ import java.util.concurrent.TimeUnit;
  *
  * @author parkstud@qq.com 2020-03-29
  */
-public abstract class BaseConcurrenceUtil {
-    /**
-     * 私有化构造函数
-     */
-    private BaseConcurrenceUtil() {
-    }
+public interface BaseConcurrenceUtil {
+
 
     /**
      * 获取公共线程池
      *
      * @return 公共线程池
      */
-    public static ForkJoinPool getCommonPool() {
+    static ForkJoinPool getCommonPool() {
         return ForkJoinPool.commonPool();
     }
 
@@ -41,12 +37,12 @@ public abstract class BaseConcurrenceUtil {
      * @param threadFactory   线程工厂 (推荐) 使用guava的ThreadFactoryBuilder
      * @return 线程池
      */
-    public static ThreadPoolExecutor getThreadPoolExecutor(int corePoolSize,
-                                                           int maximumPoolSize,
-                                                           long keepAliveTime,
-                                                           TimeUnit unit,
-                                                           BlockingQueue<Runnable> workQueue,
-                                                           ThreadFactory threadFactory) {
+    static ThreadPoolExecutor getThreadPoolExecutor(int corePoolSize,
+                                                    int maximumPoolSize,
+                                                    long keepAliveTime,
+                                                    TimeUnit unit,
+                                                    BlockingQueue<Runnable> workQueue,
+                                                    ThreadFactory threadFactory) {
         return new ThreadPoolExecutor(corePoolSize,
                 maximumPoolSize,
                 keepAliveTime,
@@ -60,7 +56,7 @@ public abstract class BaseConcurrenceUtil {
      *
      * @return 线程池
      */
-    public static ThreadPoolExecutor getDefaultThreadPoolExecutor() {
+    static ThreadPoolExecutor getDefaultThreadPoolExecutor() {
         return new ThreadPoolExecutor(Runtime.getRuntime().availableProcessors(),
                 Runtime.getRuntime().availableProcessors() * 2,
                 60,

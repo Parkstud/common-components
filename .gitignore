@@ -28,3 +28,9 @@ app.jar
 Thumbs.db
 
 gitlabci/.generated
+/cm-spring-cloud/cm-cloud-eureka/src/main/resources/rebel.xml
+/cm-spring-cloud/cm-cloud-eureka/.rebel.xml.bak
+/cm-spring-cloud/cm-cloud-eureka/.rebel-remote.xml.bak
+/cm-spring-cloud/cm-cloud-eureka-server/.rebel.xml.bak
+/cm-spring-cloud/cm-cloud-eureka-server/.rebel-remote.xml.bak
+/cm-spring-cloud/cm-cloud-eureka-server/src/main/resources/rebel.xml

@@ -10,9 +10,7 @@ import java.util.function.Supplier;
  *
  * @author parkstud@qq.com 2020-03-31
  */
-public abstract class BaseSystemUtil {
-    private BaseSystemUtil() {
-    }
+public interface BaseSystemUtil {
 
     /**
      * 计算运行时间

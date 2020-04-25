@@ -277,12 +277,12 @@ package demo1.dubbo.service;
 import com.alibaba.dubbo.config.spring.context.annotation.DubboComponentScan;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.org.cm.cloud.eureka.server.SpringBootApplication;
 
 /**
  * @author parkstud@qq.com 2020-01-16
  */
-@SpringBootApplication
+@org.cm.cloud.eureka.server.SpringBootApplication
 @DubboComponentScan("demo1.dubbo.service.service")
 public class DemoServerApplication {
     public static void main(String[] args) {
@@ -458,12 +458,12 @@ package demo1.dubbo.client;
 
 import com.alibaba.dubbo.config.spring.context.annotation.DubboComponentScan;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.org.cm.cloud.eureka.server.SpringBootApplication;
 
 /**
  * @author chen
  */
-@SpringBootApplication
+@org.cm.cloud.eureka.server.SpringBootApplication
 @DubboComponentScan(value = "demo1.dubbo.client.service")
 public class DemoClientApplication {
 

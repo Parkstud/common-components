@@ -1,0 +1,6 @@
+spring:
+  security:
+    user:
+      roles: root
+      name: root
+      password: root
