@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Comparator;
@@ -8,6 +9,24 @@ import java.util.List;
  */
 public class TempTest {
     public static void main(String[] args) {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(new Integer(1));
+        arr.add(new Integer(1000));
+        Integer integer = arr.get(1);
+        Object[] objects = arr.toArray();
+        System.out.println(integer);
+        System.out.println(objects[1]);
+        System.out.println(objects[1]==integer);
+
+        Integer a=Integer.valueOf(127);
+        Integer b=Integer.valueOf(127);
+
+        Integer a1=128;
+        Integer b1=128;
+        int a2=128;
+        System.out.println(a == b);
+        System.out.println(a1 == b1);
+        System.out.println(a2 == a1);
 
 
     }

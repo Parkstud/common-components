@@ -1,0 +1,36 @@
+version: '2'
+services:
+  zookeeper:
+    image: wurstmeister/zookeeper
+    ports:
+      - "2181:2181"                 ## 对外暴露的端口号
+  kafka:
+    image: wurstmeister/kafka
+    ## 挂载位置（kafka镜像和宿主机器之间时间保持一直）
+    volumes:
+      - /etc/localtime:/etc/localtime
+    ports:
+      - "9092:9092"
+    environment:
+      ## 修改:宿主机IP
+      KAFKA_ADVERTISED_HOST_NAME: 106.14.4.232
+      ## 卡夫卡运行是基于zookeeper的
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+  kafka-manager:
+    ## 镜像：开源的web管理kafka集群的界面
+    image: sheepkiller/kafka-manager
+    environment:
+      ## 修改:宿主机IP
+      ZK_HOSTS: 106.14.4.232
+      ## 暴露端口
+    ports:
+      - "9000:9000"
+
+
+      #        /* 运行单机版kafka */
+      #docker-compose up -d
+      #
+      #/*  运行kafka集群模式*/
+      #/*  由于指定了kafka对外暴露的端口号，增加集群节点会报端口冲突的错误，请将kafka暴露的端口号删掉后再执行如下命令*/
+      #/*  自己指定kafka的节点数量 */
+      #docker-compose scale kafka=3

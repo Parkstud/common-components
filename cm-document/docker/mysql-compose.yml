@@ -1,0 +1,23 @@
+# mysql 配置实例
+# Use root/example as user/password credentials
+version: '2'
+
+services:
+
+  db:
+    image: mysql
+    container_name: mysql
+    command:
+      --default-authentication-plugin=mysql_native_password
+      --character-set-server=utf8mb4
+      --explicit_defaults_for_timestamp=true
+    restart: always
+    volumes:
+      - /mysql/conf:/etc/mysql/conf.d
+      - /mysql/data:/var/lib/mysql
+    environment:
+      COMPOSE_TLS_VERSION: TLSv1_2
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: database
+    ports:
+      - 3306:3306
