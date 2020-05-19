@@ -123,17 +123,6 @@ public interface BaseConstants {
      * 符号常量
      */
     interface Symbol {
-        /**
-         * 感叹号：!
-         */
-        String SIGH = "!";
-        /**
-         * 符号：@
-         */
-        String AT = "@";
-        /**
-         * 井号：#
-         */
         String WELL = "#";
         /**
          * 美元符：$
@@ -195,46 +184,7 @@ public interface BaseConstants {
          * 点号：.
          */
         String POINT = ".";
-        /**
-         * 斜杠：/
-         */
-        String SLASH = "/";
-        /**
-         * 竖杠：|
-         */
-        String VERTICAL_BAR = "|";
-        /**
-         * 双斜杠：//
-         */
-        String DOUBLE_SLASH = "//";
-        /**
-         * 反斜杠
-         */
-        String BACKSLASH = "\\";
-        /**
-         * 问号：?
-         */
-        String QUESTION = "?";
-        /**
-         * 左花括号：{
-         */
-        String LEFT_BIG_BRACE = "{";
-        /**
-         * 右花括号：}
-         */
-        String RIGHT_BIG_BRACE = "}";
-        /**
-         * 左中括号：[
-         */
-        String LEFT_MIDDLE_BRACE = "[";
-        /**
-         * 右中括号：[
-         */
-        String RIGHT_MIDDLE_BRACE = "]";
-        /**
-         * 反引号：`
-         */
-        String BACKQUOTE = "`";
+
     }
 
 }
