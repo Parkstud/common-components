@@ -17,13 +17,13 @@ import java.util.function.Consumer;
  *
  * @author parkstud@qq.com 2020-03-31
  */
-public abstract class BaseBeanCopierUtil {
+public abstract class BeanCopierUtil {
     /**
      * 缓存BeanCopier
      */
     private static final Map<String, BeanCopier> BEAN_COPIER_CACHE = new ConcurrentHashMap<>();
 
-    private BaseBeanCopierUtil() {
+    private BeanCopierUtil() {
     }
 
 

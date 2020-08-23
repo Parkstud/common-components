@@ -1,6 +1,6 @@
 package concurrency;
 
-import org.cm.boot.starter.util.BaseConcurrenceUtil;
+import org.cm.boot.starter.util.ConcurrenceUtil;
 import org.cm.boot.starter.util.BaseSystemUtil;
 
 import java.util.concurrent.ThreadPoolExecutor;
@@ -81,7 +81,7 @@ public class StampedLockDemo {
 
     private static ThreadPoolExecutor test1() {
         StampedLockDemo demo = new StampedLockDemo();
-        ThreadPoolExecutor pool = BaseConcurrenceUtil.getDefaultThreadPoolExecutor();
+        ThreadPoolExecutor pool = ConcurrenceUtil.getDefaultThreadPoolExecutor();
         for (int i = 0; i < 1000; i++) {
             pool.execute(new MoveTask(demo));
             pool.execute(new DistanceTask(demo));

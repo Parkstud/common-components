@@ -1,5 +1,7 @@
 package org.cm.boot.starter.config;
 
+import java.time.format.DateTimeFormatter;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
@@ -7,6 +9,14 @@ import lombok.Getter;
  * @author parkstud@qq.com 2020-05-19
  */
 public interface BaseConstants {
+
+    /**
+     * 时间格式
+     */
+    DateTimeFormatter dtf = DateTimeFormatter.ofPattern(Pattern.DATETIME.getPatternStr());
+
+
+
     /**
      * 原始常量
      */
@@ -105,6 +115,24 @@ public interface BaseConstants {
         private final String patternStr;
     }
 
+
+    @AllArgsConstructor
+    @Getter
+    enum Type {
+        /**
+         * info
+         */
+        INFO("info"),
+
+        WARN("warn"),
+
+        ERROR("error");
+        /**
+         * 异常类型
+         */
+        private final String type;
+    }
+
     /**
      * 1/0
      */
@@ -148,8 +176,17 @@ public interface BaseConstants {
          * 百分号：%
          */
         String PERCENTAGE = "%";
-
-
     }
+
+    @Getter
+    @AllArgsConstructor
+    enum ErrorCode {
+        /**
+         * 系统错误
+         */
+        ERROR("error.error");
+        private String errorCode;
+    }
+
 
 }

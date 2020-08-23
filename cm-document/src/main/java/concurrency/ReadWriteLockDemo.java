@@ -1,6 +1,6 @@
 package concurrency;
 
-import org.cm.boot.starter.util.BaseConcurrenceUtil;
+import org.cm.boot.starter.util.ConcurrenceUtil;
 
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.locks.Lock;
@@ -66,7 +66,7 @@ public class ReadWriteLockDemo {
     }
 
     public static void main(String[] args) {
-        ThreadPoolExecutor pool = BaseConcurrenceUtil.getDefaultThreadPoolExecutor();
+        ThreadPoolExecutor pool = ConcurrenceUtil.getDefaultThreadPoolExecutor();
         ReadWriteLockDemo readWriteLockDemo = new ReadWriteLockDemo();
         for (int i = 0; i < 10; i++) {
             pool.execute(new ReadWriteLockDemo.ReadThread(readWriteLockDemo));

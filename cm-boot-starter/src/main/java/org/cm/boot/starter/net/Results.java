@@ -1,4 +1,4 @@
-package org.cm.boot.starter.util;
+package org.cm.boot.starter.net;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

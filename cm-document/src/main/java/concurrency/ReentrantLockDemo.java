@@ -1,6 +1,6 @@
 package concurrency;
 
-import org.cm.boot.starter.util.BaseConcurrenceUtil;
+import org.cm.boot.starter.util.ConcurrenceUtil;
 
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.locks.Lock;
@@ -18,7 +18,7 @@ import lombok.extern.slf4j.Slf4j;
 public class ReentrantLockDemo {
     public static void main(String[] args) {
 
-        ThreadPoolExecutor poolExecutor = BaseConcurrenceUtil.getDefaultThreadPoolExecutor();
+        ThreadPoolExecutor poolExecutor = ConcurrenceUtil.getDefaultThreadPoolExecutor();
         Lock lock=new ReentrantLock();
         poolExecutor.execute(new LockThread("A", lock));
         poolExecutor.execute(new LockThread("B", lock));

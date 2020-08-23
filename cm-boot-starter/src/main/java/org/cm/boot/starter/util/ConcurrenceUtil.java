@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
  *
  * @author parkstud@qq.com 2020-03-29
  */
-public interface BaseConcurrenceUtil {
+public interface ConcurrenceUtil {
 
 
     /**
