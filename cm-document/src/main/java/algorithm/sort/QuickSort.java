@@ -3,7 +3,7 @@ package algorithm.sort;
 /**
  * 快速排序
  *
- * @author miao.chen01@hand-china.com 2021-04-28
+ * @author wenqi.ma@hand-china.com 2021-04-28
  */
 public class QuickSort implements ISort {
 

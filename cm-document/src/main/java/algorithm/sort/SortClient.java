@@ -23,8 +23,10 @@ public class SortClient {
         //        SortHelper.test(new MergeSort());
 
         // 快速排序
-        SortHelper.test(new QuickSort());
+        //        SortHelper.test(new QuickSort());
 
+        // 堆排序
+        SortHelper.test(new HeapSort());
 
     }
 }
